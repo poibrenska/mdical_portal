@@ -1,0 +1,55 @@
+{
+  "name": "Documents",
+  "fields": [
+    {
+      "fieldName": "fileName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "docType",
+      "fieldType": "DocumentType",
+      "fieldValues": "EXAMINATION",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "streamData",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "meta",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "doctor",
+      "otherEntityRelationshipName": "documents",
+      "relationshipName": "doctor",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "patient",
+      "otherEntityRelationshipName": "documents",
+      "relationshipName": "patient",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210117210159",
+  "javadoc": "The Documents entity.",
+  "entityTableName": "documents",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "clientRootFolder": "medportal",
+  "applications": "*",
+  "enableEntityAudit": true,
+  "microserviceName": "medportal",
+  "databaseType": "sql"
+}

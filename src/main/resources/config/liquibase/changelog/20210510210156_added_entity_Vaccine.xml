@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+    <!--
+        Added the entity Vaccine.
+    -->
+    <changeSet id="20210510210156-1" author="jhipster">
+        <createTable tableName="vaccine" remarks="The Vaccine entity.">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="type" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="dose" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="next_dose_date" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="doses_left" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="patient_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="doctor_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="vaccine" columnName="next_dose_date" columnDataType="datetime"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!-- Added the entity audit columns -->
+    <changeSet id="20210510210156-audit-1" author="jhipster-entity-audit">
+        <addColumn tableName="vaccine">
+            <column name="created_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="timestamp" defaultValueDate="${now}">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="varchar(50)"/>
+            <column name="last_modified_date" type="timestamp"/>
+        </addColumn>
+    </changeSet>
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20210510210156-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/vaccine.csv"
+                  separator=";"
+                  tableName="vaccine">
+            <column name="id" type="numeric"/>
+            <column name="type" type="string"/>
+            <column name="dose" type="numeric"/>
+            <column name="next_dose_date" type="datetime"/>
+            <column name="doses_left" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

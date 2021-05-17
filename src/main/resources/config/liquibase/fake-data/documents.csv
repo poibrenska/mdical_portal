@@ -1,0 +1,14 @@
+id;file_name;doc_type;stream_data;stream_data_content_type;meta;doctor_id;patient_id;created_by;created_date
+1;prescription1;PRESCRIPTION;../fake-data/blob/hipster.png;image/png;{};2;1;user;2021-05-15
+2;examination2;EXAMINATION;../fake-data/blob/hipster.png;image/png;{};1;2;user;2021-05-15
+3;examination3;EXAMINATION;../fake-data/blob/hipster.png;image/png;{};1;3;user;2021-05-15
+4;examination4;EXAMINATION;../fake-data/blob/hipster.png;image/png;{};2;4;user;2021-05-15
+5;prescription5;PRESCRIPTION;../fake-data/blob/hipster.png;image/png;{};2;5;user;2021-05-15
+6;prescription6;PRESCRIPTION;../fake-data/blob/hipster.png;image/png;{};3;6;user;2021-05-15
+7;examination7;EXAMINATION;../fake-data/blob/hipster.png;image/png;{};3;7;user;2021-05-15
+8;prescription8;PRESCRIPTION;../fake-data/blob/hipster.png;image/png;{};2;8;user;2021-05-15
+9;prescription9;PRESCRIPTION;../fake-data/blob/hipster.png;image/png;{};1;9;user;2021-05-15
+10;prescription10;PRESCRIPTION;../fake-data/blob/hipster.png;image/png;{};2;10;user;2021-05-15
+11;examination11;EXAMINATION;../fake-data/blob/hipster.png;image/png;{};2;8;user;2021-05-15
+12;examination12;EXAMINATION;../fake-data/blob/hipster.png;image/png;{};1;9;user;2021-05-15
+13;examination13;EXAMINATION;../fake-data/blob/hipster.png;image/png;{};2;10;user;2021-05-15

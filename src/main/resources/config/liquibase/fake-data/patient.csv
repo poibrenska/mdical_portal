@@ -1,0 +1,13 @@
+id;first_name;last_name;address_text;birth_date;egn;phone;gp;active;created_date;created_by;last_modified_by
+1;Administrator;Administrator;Sofia Addr1;1988-02-02;8802025555;0888889999;1;true;2021-05-15;system;system
+2;User;User;Sofia Addr2;1988-02-02;8802025556;0888888888;2;true;2021-05-15;system;system
+3;Magnus;Cassin;Sofia Addr3;1988-02-02;8802025557;0999995572;3;true;2021-05-15;system;system
+4;Mayra;Little;Sofia Addr4;1988-02-02;8802025558;0999995582;4;true;2021-05-15;system;system
+5;Audie;Renner;Sofia Addr5;1988-02-02;8802025559;0999995592;5;true;2021-05-15;system;system
+6;Flavio;Quitzon;Sofia Addr6;1988-02-02;8802025560;0999995602;6;true;2021-05-15;system;system
+7;Marina;Moore;Sofia Addr7;1988-02-02;8802025561;0999995612;7;true;2021-05-15;system;system
+8;Fabian;Schuster;Sofia Addr8;1988-02-02;8802025562;0999995622;8;true;2021-05-15;system;system
+9;Nya;Dare;Sofia Addr9;1988-02-02;8802025563;0999995632;9;true;2021-05-15;system;system
+10;Retta;Keebler;Sofia Addr10;1988-02-02;8802025564;0999995642;10;true;2021-05-15;system;system
+11;Freeman;Nader;Sofia Addr11;1988-02-02;8802025565;0999995552;8;true;2021-05-15;system;system
+12;Dallas;Cartwright;Sofia Addr12;1988-02-02;8802025566;0999995552;7;true;2021-05-15;system;system

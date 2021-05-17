@@ -1,0 +1,91 @@
+{
+  "name": "Doctor",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "specialization",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "additionalInfo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "meta",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "documents",
+      "otherEntityRelationshipName": "doctor",
+      "javadoc": "A relationship",
+      "relationshipName": "documents"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "appointment",
+      "otherEntityRelationshipName": "doctor",
+      "relationshipName": "appointment"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "examinationHistory",
+      "otherEntityRelationshipName": "doctor",
+      "relationshipName": "examinationHistory"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "patient",
+      "otherEntityRelationshipName": "doctor",
+      "relationshipName": "patient",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "hospital",
+      "otherEntityRelationshipName": "doctor",
+      "relationshipName": "hospital",
+      "otherEntityField": "id",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "vaccine",
+      "otherEntityRelationshipName": "doctor",
+      "relationshipName": "vaccine"
+    }
+  ],
+  "changelogDate": "20210510210156",
+  "javadoc": "The Doctor entity.",
+  "entityTableName": "doctor",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "clientRootFolder": "medportal",
+  "applications": "*",
+  "enableEntityAudit": true,
+  "microserviceName": "medportal",
+  "databaseType": "sql"
+}

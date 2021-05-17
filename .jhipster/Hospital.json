@@ -1,0 +1,56 @@
+{
+  "name": "Hospital",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "administrationPhones",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "noi",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "director",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "doctor",
+      "otherEntityRelationshipName": "hospital",
+      "relationshipName": "doctor",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20210510210156",
+  "javadoc": "The Hospital entity.",
+  "entityTableName": "hospital",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "clientRootFolder": "medportal",
+  "applications": "*",
+  "enableEntityAudit": true,
+  "microserviceName": "medportal",
+  "databaseType": "sql"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "VaccineType",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "doses",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "durationBetweenDosesTime",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "durationBetweenDosesUnit",
+      "fieldType": "CalendarUnit",
+      "fieldValues": "SECONDS,MINUTES,HOURS,DAYS,MONTHS,YEARS",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "manufacturer",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20210510210156",
+  "javadoc": "The Vaccine Type entity.",
+  "entityTableName": "vaccineType",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "clientRootFolder": "medportal",
+  "applications": "*",
+  "enableEntityAudit": true,
+  "microserviceName": "medportal",
+  "databaseType": "sql",
+  "relationships": []
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Appointment",
+  "fields": [
+    {
+      "fieldName": "appointmentDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "finished",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "doctor",
+      "otherEntityRelationshipName": "appointment",
+      "relationshipName": "doctor",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "patient",
+      "otherEntityRelationshipName": "appointment",
+      "relationshipName": "patient",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210510210156",
+  "javadoc": "The Appointments entity.",
+  "entityTableName": "appointment",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "clientRootFolder": "medportal",
+  "applications": "*",
+  "enableEntityAudit": true,
+  "microserviceName": "medportal",
+  "databaseType": "sql"
+}

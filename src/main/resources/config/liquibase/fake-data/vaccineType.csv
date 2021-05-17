@@ -1,0 +1,5 @@
+id;name;doses;duration_between_doses_time;duration_between_doses_unit;manufacturer
+1;Pfizer;2;60;DAYS;BioNTech
+2;AstraZeneca;2;50;DAYS;Oxford
+3;Moderna;2;55;DAYS;Moderna
+

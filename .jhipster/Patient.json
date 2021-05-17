@@ -1,0 +1,96 @@
+{
+  "name": "Patient",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "addressText",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "birthDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "egn",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "gp",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "patient",
+      "relationshipName": "user",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "documents",
+      "otherEntityRelationshipName": "patient",
+      "relationshipName": "documents"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "appointment",
+      "otherEntityRelationshipName": "patient",
+      "relationshipName": "appointment"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "examinationHistory",
+      "otherEntityRelationshipName": "patient",
+      "relationshipName": "examinationHistory"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "doctor",
+      "otherEntityRelationshipName": "patient",
+      "relationshipName": "doctor",
+      "otherEntityField": "id",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "vaccine",
+      "otherEntityRelationshipName": "patient",
+      "relationshipName": "vaccine"
+    }
+  ],
+  "changelogDate": "20210510210156",
+  "javadoc": "The Patient entity.",
+  "entityTableName": "patient",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "clientRootFolder": "medportal",
+  "applications": "*",
+  "enableEntityAudit": true,
+  "microserviceName": "medportal",
+  "databaseType": "sql"
+}
